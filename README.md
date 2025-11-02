@@ -1,29 +1,28 @@
-# ☁️ Desafio EC2 - DIO  
+# Desafio: Infraestrutura básica com EC2
 
-## 📘 Descrição  
-Este repositório documenta a prática realizada sobre **instâncias EC2 na AWS**, com o objetivo de aplicar os conceitos aprendidos no curso e registrar o processo de forma organizada.  
+Este repositório é para documentar a prática realizada para o gerenciamento de instâncias EC2 na AWS, com objetivo é consolidar os conceitos aprendidos no curso, aplicando-os de forma prática e documentar. Diagrama criado no **draw.io** (app.diagrams.net/).
 
----
-
-## 🎯 Objetivos  
+## Objetivos  
 - Criar e gerenciar uma **instância EC2**.  
 - Criar e utilizar **AMIs**.  
 - Criar **Snapshots EBS** para backup.  
-- Praticar a documentação no **GitHub**.  
 
 ---
 
-## 🧭 Passo a Passo  
+## Diagrama da Arquitetura  
 
-**1️⃣ Criar uma instância EC2**  
-- Acesse o console da AWS.  
-- Clique em **“Launch Instance”**.  
-- Escolha a AMI (ex.: Amazon Linux 2) e o tipo de instância (`t2.micro`).  
+![Diagrama EC2 AWS](/diagrama-ec2.jpg)  
 
-**2️⃣ Configurar o grupo de segurança**  
-- Permitir **SSH (porta 22)** para Linux ou **RDP (porta 3389)** para Windows.  
+ 
+- **Cliente:** é o usuário que acessa o console da AWS para criar e gerenciar os recursos.  
+- **AWS Cloud:** representa a nuvem da Amazon, onde os serviços estão hospedados.  
+- **VPC (Virtual Private Cloud):** é a rede virtual onde ficam suas instâncias e outros recursos.  
+- **EC2 Instance:** é a máquina virtual criada dentro da VPC.  
+- **EBS Volume:** é o disco de armazenamento conectado à instância EC2.  
+- **Snapshot:** é uma cópia de segurança do volume EBS, usada para restaurar dados.  
+- **AMI (Amazon Machine Image):** é uma imagem da instância EC2, que pode ser usada para criar novas instâncias iguais.
+  
+---
 
-**3️⃣ Acessar a instância**  
-- **Linux:**  
-  ```bash
-  ssh -i chave.pem usuario@ip-publico
+## 📚 Referência  
+- [AWS EC2 Documentation](https://docs.aws.amazon.com/pt_br/ec2/index.html)
