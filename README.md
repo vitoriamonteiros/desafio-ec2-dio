@@ -12,35 +12,35 @@ Este repositório é para documentar a prática realizada para o gerenciamento d
 
 ## Passo a Passo da Atividade
 
-### 1. Criar uma instância EC2
+### Passo 1. Criar uma instância EC2
 - Acesse o console AWS EC2.
 - Clique em “Launch Instance”.
 - Escolha a Amazon Machine Image (AMI) desejada (Linux/Windows).
 - Selecione o tipo de instância (ex.: t2.micro para testes gratuitos).
 
-### 2. Configurar o grupo de segurança (Security Group)
+### Passo 2. Configurar o grupo de segurança (Security Group)
 - Permitir acesso SSH (porta 22) para Linux ou RDP (porta 3389) para Windows.
 - Configurar regras adicionais conforme necessidade (ex.: HTTP/HTTPS).
 
-### 3. Acessar a instância
+### Passo 3. Acessar a instância
 - Para Linux: use `ssh -i chave.pem usuario@ip-publico`.
 - Para Windows: utilize RDP com usuário e senha gerados.
 
-### 4. Trabalhar com AMIs
+### Passo 4. Trabalhar com AMIs
 - Configurar a instância conforme necessário.
 - Criar uma **AMI** da instância para replicação futura.
 - Registrar o ID da AMI para uso posterior.
 
-### 5. Trabalhar com Snapshots EBS
+### Passo 5. Trabalhar com Snapshots EBS
 - Criar **Snapshots EBS** dos volumes anexados à instância.
 - Verificar tamanho, tipo de armazenamento e implicações de custo.
 - Utilizar snapshots para backup e recuperação de dados.
 
-### 6. Monitoramento e otimização
+### Passo 6. Monitoramento e otimização
 - Verificar métricas básicas de CPU, memória e disco via CloudWatch.
 - Considerar desligamento automático ou redução de tamanho da instância para otimização de custos.
 
-## Conclusões / Insights
+## Conclusões:
 - Aprendi como criar e gerenciar instâncias EC2 de forma prática.
 - Entendi o modelo de responsabilidade compartilhada da AWS: a AWS gerencia a infraestrutura física, enquanto o usuário é responsável pelo sistema operacional e aplicações.
 - Compreendi a importância de **AMIs e Snapshots EBS** para replicação de ambientes e backup de dados.
